@@ -1,0 +1,8 @@
+<app-add-quantity (addQuantity)="addQuantity($event)" ></app-add-quantity>
+
+<p>Today calories consumed: {{total | number}} </p>
+<app-quantity-item
+        *ngFor="let quantity of quantities"
+        [quantity]="quantity"
+        >
+</app-quantity-item>

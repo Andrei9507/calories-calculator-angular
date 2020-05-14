@@ -1,0 +1,16 @@
+<div style="text-align: center ;">
+
+        <p *ngIf="!editableProduct" style="display: inline-flex ;">
+                {{ product.name }}
+        </p>
+        <input *ngIf="editableProduct" [(ngModel)]="product.name" type="text" />
+        <p *ngIf="!editableProduct" style="display: inline-flex ; padding-left: 5rem; padding-right: 5rem;">
+                {{ product.kcal }}
+        </p>
+        <input *ngIf="editableProduct" [(ngModel)]="product.kcal" type="number" />
+
+        <button *ngIf="!editableProduct" (click)="editItem()" >Edit</button>
+        <button *ngIf="editableProduct" (click)="updateItem()">Update</button>
+        <button (click)="deleteProduct(product)" >Delete</button>
+        
+</div>

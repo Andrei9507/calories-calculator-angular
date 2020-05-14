@@ -1,0 +1,8 @@
+<app-add-product (addProduct)="addProduct($event)"></app-add-product>
+
+<app-product-item 
+  *ngFor="let product of products" 
+  [product]="product"
+  (deleteItem)="deleteItem($event)"
+  >
+</app-product-item>

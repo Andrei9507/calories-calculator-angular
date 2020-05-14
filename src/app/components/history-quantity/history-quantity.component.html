@@ -1,0 +1,18 @@
+<div>
+        <input type="text"
+                placeholder="Datepicker"
+                class="form-control"
+                bsDatepicker
+                [bsConfig]="bsConfig"
+                [(ngModel)]="myHistoryDate"
+                (ngModelChange)="getHistoryDate()"
+        >
+
+        <div *ngIf="enableListing">
+                <p>Total: {{total | number}} kcal</p>
+                <p  *ngFor="let quantity of quantities">
+                        {{quantity.product.name}}/{{quantity.kcal}} kcal / {{quantity.quantity}} g
+                </p>
+        </div>
+
+</div>
